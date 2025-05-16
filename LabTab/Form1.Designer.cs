@@ -30,17 +30,15 @@
         {
             somar = new TabControl();
             tabPage1 = new TabPage();
-            tabPage2 = new TabPage();
-            tabPage3 = new TabPage();
-            tabPage4 = new TabPage();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            txtNum1Somar = new TextBox();
-            txtNum2TabSomar = new TextBox();
-            txtResultadoSomar = new TextBox();
-            txtSomar = new Button();
             label4 = new Label();
+            txtSomar = new Button();
+            txtResultadoSomar = new TextBox();
+            txtNum2TabSomar = new TextBox();
+            txtNum1TabSomar = new TextBox();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            tabPage2 = new TabPage();
             label5 = new Label();
             btnSubtrair = new Button();
             txtResultadoSubtracao = new TextBox();
@@ -49,6 +47,7 @@
             label6 = new Label();
             label7 = new Label();
             label8 = new Label();
+            tabPage3 = new TabPage();
             label9 = new Label();
             btnMultiplicar = new Button();
             txtResultadoMultiplicacao = new TextBox();
@@ -57,6 +56,7 @@
             label10 = new Label();
             label11 = new Label();
             label12 = new Label();
+            tabPage4 = new TabPage();
             label13 = new Label();
             btnDividir = new Button();
             txtResultadoDivisao = new TextBox();
@@ -90,7 +90,7 @@
             tabPage1.Controls.Add(txtSomar);
             tabPage1.Controls.Add(txtResultadoSomar);
             tabPage1.Controls.Add(txtNum2TabSomar);
-            tabPage1.Controls.Add(txtNum1Somar);
+            tabPage1.Controls.Add(txtNum1TabSomar);
             tabPage1.Controls.Add(label3);
             tabPage1.Controls.Add(label2);
             tabPage1.Controls.Add(label1);
@@ -101,6 +101,76 @@
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Somar";
             tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.Red;
+            label4.Location = new Point(146, 56);
+            label4.Name = "label4";
+            label4.Size = new Size(25, 25);
+            label4.TabIndex = 7;
+            label4.Text = "+";
+            // 
+            // txtSomar
+            // 
+            txtSomar.Location = new Point(232, 119);
+            txtSomar.Name = "txtSomar";
+            txtSomar.Size = new Size(58, 23);
+            txtSomar.TabIndex = 6;
+            txtSomar.Text = "Somar";
+            txtSomar.UseVisualStyleBackColor = true;
+            txtSomar.Click += txtSomar_Click;
+            // 
+            // txtResultadoSomar
+            // 
+            txtResultadoSomar.Location = new Point(25, 119);
+            txtResultadoSomar.Name = "txtResultadoSomar";
+            txtResultadoSomar.ReadOnly = true;
+            txtResultadoSomar.Size = new Size(100, 23);
+            txtResultadoSomar.TabIndex = 5;
+            // 
+            // txtNum2TabSomar
+            // 
+            txtNum2TabSomar.Location = new Point(190, 58);
+            txtNum2TabSomar.Name = "txtNum2TabSomar";
+            txtNum2TabSomar.Size = new Size(100, 23);
+            txtNum2TabSomar.TabIndex = 4;
+            // 
+            // txtNum1TabSomar
+            // 
+            txtNum1TabSomar.Location = new Point(25, 56);
+            txtNum1TabSomar.Name = "txtNum1TabSomar";
+            txtNum1TabSomar.Size = new Size(100, 23);
+            txtNum1TabSomar.TabIndex = 3;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(41, 101);
+            label3.Name = "label3";
+            label3.Size = new Size(59, 15);
+            label3.TabIndex = 2;
+            label3.Text = "Resultado";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(190, 28);
+            label2.Name = "label2";
+            label2.Size = new Size(101, 15);
+            label2.TabIndex = 1;
+            label2.Text = "Segundo Número";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(26, 28);
+            label1.Name = "label1";
+            label1.Size = new Size(99, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Primeiro Número";
             // 
             // tabPage2
             // 
@@ -119,112 +189,6 @@
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Subtrair";
             tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            tabPage3.Controls.Add(label9);
-            tabPage3.Controls.Add(btnMultiplicar);
-            tabPage3.Controls.Add(txtResultadoMultiplicacao);
-            tabPage3.Controls.Add(txtNum2MultTab3);
-            tabPage3.Controls.Add(txtNum1MultTab3);
-            tabPage3.Controls.Add(label10);
-            tabPage3.Controls.Add(label11);
-            tabPage3.Controls.Add(label12);
-            tabPage3.Location = new Point(4, 24);
-            tabPage3.Name = "tabPage3";
-            tabPage3.Padding = new Padding(3);
-            tabPage3.Size = new Size(426, 233);
-            tabPage3.TabIndex = 2;
-            tabPage3.Text = "Multiplicar";
-            tabPage3.UseVisualStyleBackColor = true;
-            tabPage3.Click += tabPage3_Click;
-            // 
-            // tabPage4
-            // 
-            tabPage4.Controls.Add(label13);
-            tabPage4.Controls.Add(btnDividir);
-            tabPage4.Controls.Add(txtResultadoDivisao);
-            tabPage4.Controls.Add(txtNum2DivTab4);
-            tabPage4.Controls.Add(txtNum1DivTab4);
-            tabPage4.Controls.Add(label14);
-            tabPage4.Controls.Add(label15);
-            tabPage4.Controls.Add(label16);
-            tabPage4.Location = new Point(4, 24);
-            tabPage4.Name = "tabPage4";
-            tabPage4.Padding = new Padding(3);
-            tabPage4.Size = new Size(426, 233);
-            tabPage4.TabIndex = 3;
-            tabPage4.Text = "Dividir";
-            tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(26, 28);
-            label1.Name = "label1";
-            label1.Size = new Size(99, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Primeiro Número";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(190, 28);
-            label2.Name = "label2";
-            label2.Size = new Size(101, 15);
-            label2.TabIndex = 1;
-            label2.Text = "Segundo Número";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(41, 101);
-            label3.Name = "label3";
-            label3.Size = new Size(59, 15);
-            label3.TabIndex = 2;
-            label3.Text = "Resultado";
-            // 
-            // txtNum1Somar
-            // 
-            txtNum1Somar.Location = new Point(25, 56);
-            txtNum1Somar.Name = "txtNum1Somar";
-            txtNum1Somar.Size = new Size(100, 23);
-            txtNum1Somar.TabIndex = 3;
-            // 
-            // txtNum2TabSomar
-            // 
-            txtNum2TabSomar.Location = new Point(190, 58);
-            txtNum2TabSomar.Name = "txtNum2TabSomar";
-            txtNum2TabSomar.Size = new Size(100, 23);
-            txtNum2TabSomar.TabIndex = 4;
-            // 
-            // txtResultadoSomar
-            // 
-            txtResultadoSomar.Location = new Point(25, 119);
-            txtResultadoSomar.Name = "txtResultadoSomar";
-            txtResultadoSomar.ReadOnly = true;
-            txtResultadoSomar.Size = new Size(100, 23);
-            txtResultadoSomar.TabIndex = 5;
-            // 
-            // txtSomar
-            // 
-            txtSomar.Location = new Point(232, 119);
-            txtSomar.Name = "txtSomar";
-            txtSomar.Size = new Size(58, 23);
-            txtSomar.TabIndex = 6;
-            txtSomar.Text = "Somar";
-            txtSomar.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.Red;
-            label4.Location = new Point(146, 56);
-            label4.Name = "label4";
-            label4.Size = new Size(25, 25);
-            label4.TabIndex = 7;
-            label4.Text = "+";
             // 
             // label5
             // 
@@ -245,6 +209,7 @@
             btnSubtrair.TabIndex = 14;
             btnSubtrair.Text = "Subtrair";
             btnSubtrair.UseVisualStyleBackColor = true;
+            btnSubtrair.Click += btnSubtrair_Click;
             // 
             // txtResultadoSubtracao
             // 
@@ -295,6 +260,25 @@
             label8.TabIndex = 8;
             label8.Text = "Primeiro Número";
             // 
+            // tabPage3
+            // 
+            tabPage3.Controls.Add(label9);
+            tabPage3.Controls.Add(btnMultiplicar);
+            tabPage3.Controls.Add(txtResultadoMultiplicacao);
+            tabPage3.Controls.Add(txtNum2MultTab3);
+            tabPage3.Controls.Add(txtNum1MultTab3);
+            tabPage3.Controls.Add(label10);
+            tabPage3.Controls.Add(label11);
+            tabPage3.Controls.Add(label12);
+            tabPage3.Location = new Point(4, 24);
+            tabPage3.Name = "tabPage3";
+            tabPage3.Padding = new Padding(3);
+            tabPage3.Size = new Size(426, 233);
+            tabPage3.TabIndex = 2;
+            tabPage3.Text = "Multiplicar";
+            tabPage3.UseVisualStyleBackColor = true;
+            tabPage3.Click += tabPage3_Click;
+            // 
             // label9
             // 
             label9.AutoSize = true;
@@ -314,6 +298,7 @@
             btnMultiplicar.TabIndex = 22;
             btnMultiplicar.Text = "Multiplicar";
             btnMultiplicar.UseVisualStyleBackColor = true;
+            btnMultiplicar.Click += btnMultiplicar_Click;
             // 
             // txtResultadoMultiplicacao
             // 
@@ -364,6 +349,24 @@
             label12.TabIndex = 16;
             label12.Text = "Primeiro Número";
             // 
+            // tabPage4
+            // 
+            tabPage4.Controls.Add(label13);
+            tabPage4.Controls.Add(btnDividir);
+            tabPage4.Controls.Add(txtResultadoDivisao);
+            tabPage4.Controls.Add(txtNum2DivTab4);
+            tabPage4.Controls.Add(txtNum1DivTab4);
+            tabPage4.Controls.Add(label14);
+            tabPage4.Controls.Add(label15);
+            tabPage4.Controls.Add(label16);
+            tabPage4.Location = new Point(4, 24);
+            tabPage4.Name = "tabPage4";
+            tabPage4.Padding = new Padding(3);
+            tabPage4.Size = new Size(426, 233);
+            tabPage4.TabIndex = 3;
+            tabPage4.Text = "Dividir";
+            tabPage4.UseVisualStyleBackColor = true;
+            // 
             // label13
             // 
             label13.AutoSize = true;
@@ -383,6 +386,7 @@
             btnDividir.TabIndex = 30;
             btnDividir.Text = "Dividir";
             btnDividir.UseVisualStyleBackColor = true;
+            btnDividir.Click += btnDividir_Click;
             // 
             // txtResultadoDivisao
             // 
@@ -437,7 +441,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(550, 376);
             Controls.Add(somar);
             Name = "Form1";
             Text = "Form1";
@@ -464,7 +468,7 @@
         private Button txtSomar;
         private TextBox txtResultadoSomar;
         private TextBox txtNum2TabSomar;
-        private TextBox txtNum1Somar;
+        private TextBox txtNum1TabSomar;
         private Label label3;
         private Label label2;
         private Label label1;
